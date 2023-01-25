@@ -1,0 +1,10 @@
+<h1>welcome to the blog <%= link_to @user.name, @user%></h1>
+<ul class="blogs">
+  <% @blogs.each do |blog| %>
+    <li>
+      <strong>Title:</strong>
+      <%= blog.title%><br>
+    </li>      
+      <%= link_to "show blog",user_blog_path(@user,blog) %> 
+  <% end %>
+</ul>

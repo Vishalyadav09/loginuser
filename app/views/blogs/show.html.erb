@@ -1,0 +1,6 @@
+<%= render "blog", object:[@user,@blog] %>
+  <div>
+    <%= link_to "Edit this blog", edit_user_blog_path(@user,@blog) %> ||
+    <%= link_to "Back to blogs", user_blogs_path%> ||
+    <%= button_to "Destroy this blog", [@user, @blog], method: :delete %>
+  </div>
